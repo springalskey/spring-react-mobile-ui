@@ -1,0 +1,26 @@
+
+.ui-toast-wrapper {
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ui-toast {
+    display: flex;
+    color: #fff;
+    background:#666666;
+    border-radius:5px;
+    font-size: 16px;
+    text-align: left;
+    padding: 14px;
+    max-width: 270px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    @include fadeIn;
+  }
+
+}

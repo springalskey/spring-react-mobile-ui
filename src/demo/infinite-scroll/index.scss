@@ -1,0 +1,41 @@
+.infinite-scroll-demo {  
+  h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b5b5b5;
+    background-color: #e8e8e8;
+  }
+
+  .ui-infinite-scroll {
+    top: 30px;
+  }
+
+  .ui-infinite-scroll {
+    
+    > .list:first-child {
+      border-top: 1px solid #b5b5b5;
+    }
+
+    > .list:last-child {
+      border-bottom: 1px solid #b5b5b5;
+      .item {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .infinite-loaded {
+    background: #fff;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  
+}

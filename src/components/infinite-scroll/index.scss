@@ -1,0 +1,12 @@
+
+.ui-infinite-scroll {
+  background-color: #efeff4;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
