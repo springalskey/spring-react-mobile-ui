@@ -8,12 +8,6 @@ var cssLoader = isProd
   ? ExtractTextPlugin.extract("style", "css!resolve-url!sass?sourceMap")
   : 'style!css?sourceMap!resolve-url!sass?sourceMap'
 
-
-  // 'style-loader', 
-  //     'css-loader?sourceMap', 
-  //     'resolve-url-loader', 
-  //     'sass-loader?sourceMap',
-
 var path = require('path');
 var https = require('https');
 var ip = require('ip');
