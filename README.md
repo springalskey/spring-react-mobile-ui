@@ -1,29 +1,5 @@
-## 移动端react选择器，支持拓展二级联动，三级联动
+## react mobile ui
 
-
-## How to use
-
-```
-$ npm install spring-picker -S
-
-import 'spring-picker/lib/style.css';
-import { Picker, Popup } from 'spring-picker';
-
-<Popup
-  onCancel={this.cancelUserPicker.bind(this)}
-  onConfirm={this.closeUserPicker.bind(this)}
-  visible={this.state.userPickerVisible}>
-  <Picker
-    onChange={this.handleChangeUser.bind(this)}
-    data={this.userData}
-  />
-</Popup>
-
-```
-
-## How to run this project
-
-```
 # install dependencies
 npm install
 
@@ -34,10 +10,4 @@ npm start
 npm run build
 
 ```
-
-## example1
-![image](https://github.com/springalskey/picker/blob/master/src/assets/demo1.png)
-
-## example2
-![image](https://github.com/springalskey/picker/blob/master/src/assets/demo2.png)
 
