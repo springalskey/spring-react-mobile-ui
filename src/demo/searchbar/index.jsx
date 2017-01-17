@@ -6,10 +6,14 @@ export default class SearchbarDemo extends React.Component {
     super();
   }
 
+  handleChange (value) {
+    console.log(value)
+  }
+
   render() {
     return (
       <div className="searchbar-demo">
-        <Searchbar></Searchbar>
+        <Searchbar onChange={this.handleChange.bind(this)} />
       </div>
     )
   }
