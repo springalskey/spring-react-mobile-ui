@@ -1,0 +1,15 @@
+// app style
+#app {
+  min-height: 100%;
+}
+
+@import '../../components/scss/index.scss';
+@import './common.scss';
+@import './layout.scss';
+
+// demo style
+@import '../confirm/index.scss';
+@import '../infinite-scroll/index.scss';
+@import '../list/index.scss';
+@import '../picker/index.scss';
+@import '../toast/index.scss';

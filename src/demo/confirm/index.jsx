@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './index.scss';
-
 import { Confirm } from '../../components';
 
 export default class ConfirmDemo extends React.Component {

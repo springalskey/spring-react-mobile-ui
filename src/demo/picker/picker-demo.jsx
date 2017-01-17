@@ -1,7 +1,6 @@
 import React from 'react';
 import { Picker, Popup} from '../../components';
 import { PickerAddress } from '../../components-ext';
-import './index.scss';
 
 export default class PickerDemo extends React.Component {
   

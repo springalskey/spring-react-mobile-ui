@@ -8,7 +8,7 @@
     line-height: 30px;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #b5b5b5;
+    border-bottom: 1px solid $border-color;
     background-color: #e8e8e8;
   }
 
@@ -19,11 +19,11 @@
   .ui-infinite-scroll {
     
     > .list:first-child {
-      border-top: 1px solid #b5b5b5;
+      border-top: 1px solid $border-color;
     }
 
     > .list:last-child {
-      border-bottom: 1px solid #b5b5b5;
+      border-bottom: 1px solid $border-color;
       .item {
         border-bottom: 0;
       }

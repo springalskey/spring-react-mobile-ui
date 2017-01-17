@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './index.scss';
-
 import { InfiniteScroll } from '../../components';
 
 export default class InfiniteScrollDemo extends React.Component {
