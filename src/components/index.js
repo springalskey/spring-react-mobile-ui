@@ -11,3 +11,5 @@ export { default as Toast } from './toast';
 
 export { default as InfiniteScroll } from './infinite-scroll';
 
+export { default as Searchbar } from './searchbar';
+

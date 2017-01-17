@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "react picker",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev webpack-dev-server --inline"
+    "start": "cross-env NODE_ENV=dev webpack-dev-server --inline",
+    "build": "rimraf build && cross-env NODE_ENV=production webpack -p --progress"
   },
   "babel": {
     "presets": [
@@ -48,6 +49,7 @@
     "node-sass": "^3.8.0",
     "pure-render-decorator": "^1.1.1",
     "react-transform-hmr": "^1.0.4",
+    "resolve-url-loader": "^1.6.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.12.3",

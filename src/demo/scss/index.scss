@@ -4,6 +4,7 @@
 }
 
 @import '../../components/scss/index.scss';
+@import '../../components-ext/picker-address/index.scss';
 @import './common.scss';
 @import './layout.scss';
 
@@ -13,3 +14,4 @@
 @import '../list/index.scss';
 @import '../picker/index.scss';
 @import '../toast/index.scss';
+@import '../searchbar/index.scss';

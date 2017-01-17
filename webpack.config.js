@@ -4,15 +4,19 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var isProd = process.env.NODE_ENV === 'production';
-
 var cssLoader = isProd
-  ? ExtractTextPlugin.extract('css!sass')
-  : 'style!css?sourceMap!sass?sourceMap'
+  ? ExtractTextPlugin.extract("style", "css!resolve-url!sass?sourceMap")
+  : 'style!css?sourceMap!resolve-url!sass?sourceMap'
+
+
+  // 'style-loader', 
+  //     'css-loader?sourceMap', 
+  //     'resolve-url-loader', 
+  //     'sass-loader?sourceMap',
 
 var path = require('path');
 var https = require('https');
 var ip = require('ip');
-
 var port = 9998;
 var url = 'http://'+ip.address()+':' + port + '/';
 
@@ -42,15 +46,15 @@ var config = {
     loaders: [{
       test: /\.jsx?$/,
       loader: 'babel-loader',
-      exclude: /node_modules/,
-      query: {
-        presets: ['es2015', 'react', 'stage-1'],
-      }
+      exclude: /node_modules/
     },
-    { test: /\.(scss|css)$/, loader: cssLoader },
     {
-      test: /\.(png|jpg|gif|ico)$/,
-      loader: 'url-loader?limit=8192&name=assets/[name].[ext]'
+      test: /\.(css|scss)$/,
+      loader: cssLoader
+    },
+    {
+      test: /\.(png|jpg|gif|ico|svg)$/,
+      loader: 'url-loader?limit=5120&name=[name].[ext]'
     }]
   },
 

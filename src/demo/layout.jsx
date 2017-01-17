@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
-import './layout.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class App extends React.Component {
