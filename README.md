@@ -1,5 +1,6 @@
 ## react mobile ui
 
+```
 # install dependencies
 npm install
 
