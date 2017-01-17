@@ -18,13 +18,15 @@ export default class ConfirmDemo extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Confirm</h1>
-        <button
-          type="button"
-          onClick={this.handleClick.bind(this)}
-          className="btn button-primary">
-            Confrim Test
-        </button>
+        <h1 className="title">Confirm</h1>
+        <div className="button-wrap">
+          <button
+            type="button"
+            onClick={this.handleClick.bind(this)}
+            className="btn button-primary">
+              Confrim Test
+          </button>
+        </div>
       </div>
     )
   }

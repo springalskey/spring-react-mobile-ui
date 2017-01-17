@@ -16,13 +16,15 @@ export default class ToastDemo extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Toast</h1>
-        <button
-          type="button"
-          onClick={this.handleClick.bind(this)}
-          className="btn button-primary">
-            Toast Test
-        </button>
+        <h1 className="title">Toast</h1>
+        <div className="button-wrap">
+          <button
+            type="button"
+            onClick={this.handleClick.bind(this)}
+            className="btn button-primary margin-top-15">
+              Toast Test
+          </button>
+        </div>
       </div>
     )
   }

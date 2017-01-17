@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import React from 'react';
 import {render} from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
-import './components/scss/index.scss';
+import './demo/scss/index.scss';
 
 import Layout from './demo/layout';
 import ListComponent from './demo/list';

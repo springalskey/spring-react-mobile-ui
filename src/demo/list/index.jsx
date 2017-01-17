@@ -11,7 +11,7 @@ export default class ListDemo extends React.Component {
   render() {
     return (
       <div className="list-demo">
-        <h1>List Style</h1>
+        <h1 className="title">List Style</h1>
         <div className="list">
           <div className="item">
             <Link className="item-label" to="/picker-demo">
