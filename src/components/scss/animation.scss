@@ -31,10 +31,6 @@
   @include commonAnimation;
 }
 
-.fadeIn {
-  @include fadeIn;
-}
-
 //////////fadeOut////////////
 
 @keyframes fadeOut {
@@ -59,13 +55,9 @@
   @include commonAnimation;
 }
 
-.fadeOut {
-  @include fadeOut;
-}
-
 //////////transitionBottomToUp////////////
 
-@mixin keyframes ($name,$height) {
+@mixin keyframesBottomToUp ($name,$height) {
   @keyframes transitionBottomToUp-#{$name} {
     0% {
       -webkit-transform: translate3d(0, 100%, 0);
@@ -94,12 +86,6 @@
   @include commonAnimation;
   animation-duration: 0.2s;
   -webkit-animation-duration: 0.2s;
-}
-
-// 由下至上的动画，$name：动画名称后缀；$to：从底部到to位置的过度
-@mixin transitionBottomToUpFn ($name, $to) {
-  @include transitionBottomToUp($name);
-  @include keyframes ($name,$to);
 }
 
 //////////transitionUpToBottom////////////
@@ -139,9 +125,51 @@
   -webkit-animation-duration: 0.2s;
 }
 
-// 由上至下的动画，$name：动画名称后缀；$to：从to位置到底部的过度
-@mixin transitionUpToBottomFn ($name, $to) {
-  @include transitionUpToBottom($name);
-  @include keyframesUpToBottom ($name,$to);
+
+//////////scaleOut////////////
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@mixin scaleOut {
+  animation-name: scaleOut;
+  -webkit-animation-name: scaleOut;
+  @include commonAnimation;
 }
 
+//////////scaleIn////////////
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes scaleIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@mixin scaleIn {
+  animation-name: scaleIn;
+  -webkit-animation-name: scaleIn;
+  @include commonAnimation;
+}
