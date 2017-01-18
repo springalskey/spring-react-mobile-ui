@@ -1,5 +1,8 @@
 .searchbar-demo {
   height: 100%;
   width: 100%;
-  margin-top: 44px;
+
+  .list-wrap > .list:first-child {
+    margin-top: 44px;
+  }
 }
