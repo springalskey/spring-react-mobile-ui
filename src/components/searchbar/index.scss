@@ -1,85 +1,100 @@
 $search-input-height: 28px;
 
-.ui-searchbar {
-  width: 100%;
-  height: 44px;
-  padding: 0 8px;
-  overflow: hidden;
-  background: #c9c9ce;
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 90;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
+.ui-searchbar-wrapper {
 
-  .search-input {
-    vertical-align: middle;
-    font-size: 14px;
-    height: $search-input-height;
-    position: relative;
-    flex-shrink: 1;
+  .ui-searchbar {
     width: 100%;
-
-    input {
-      width: 100%;
-      height: 100%;
-      line-height: 1.4;
-      color: #000;
-      padding: 0 $search-input-height;
-      border-radius: 5px;
-      background-color: #fff;
-      background-repeat: no-repeat;
-      background-position: 8px center;
-      background-image: url("../scss/img/icon-search.svg");
-      -webkit-background-size: 13px 13px;
-      background-size: 13px 13px;
-      -webkit-appearance: none;
-      appearance: none;
-      display: block;
-      box-sizing: border-box;
-      font-weight: normal;
-      border: none;
-      font-size: 14px;
-    }
-
-
-    input::-webkit-input-placeholder {
-      color: #999999 !important;
-      font-size: 14px;
-    }
-  }
-
-  .icon-clear {
+    height: 44px;
+    padding: 0 8px;
+    overflow: hidden;
+    background: #c9c9ce;
+    box-sizing: border-box;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    z-index: 10;
-    width: $search-input-height;
-    height: $search-input-height;
-    vertical-align: middle;
-    display: inline-block;
-    background-image: url("../scss/img/icon-clear.svg");
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: center center;
-    cursor: pointer;
-    transition-duration: 100ms;
-    @include scaleOut;
+    z-index: 1000;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+    .search-input {
+      vertical-align: middle;
+      font-size: 14px;
+      height: $search-input-height;
+      position: relative;
+      flex-shrink: 1;
+      width: 100%;
+
+      input {
+        width: 100%;
+        height: 100%;
+        line-height: 1.4;
+        color: #000;
+        padding: 0 $search-input-height;
+        border-radius: 5px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: 8px center;
+        background-image: url("../scss/img/icon-search.svg");
+        -webkit-background-size: 13px 13px;
+        background-size: 13px 13px;
+        -webkit-appearance: none;
+        appearance: none;
+        display: block;
+        box-sizing: border-box;
+        font-weight: normal;
+        border: none;
+        font-size: 14px;
+      }
+
+
+      input::-webkit-input-placeholder {
+        color: #999999 !important;
+        font-size: 14px;
+      }
+    }
+
+    .icon-clear {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      width: $search-input-height;
+      height: $search-input-height;
+      vertical-align: middle;
+      display: inline-block;
+      background-image: url("../scss/img/icon-clear.svg");
+      background-repeat: no-repeat;
+      background-size: 14px 14px;
+      background-position: center center;
+      cursor: pointer;
+      transition-duration: 100ms;
+      @include scaleOut;
+    }
+
+    .cancel {
+      display: block;
+      margin-right: -60px;
+      margin-left: 8px;
+      flex-shrink: 0;
+      font-size: 17px;
+      cursor: pointer;
+      transform: translate3d(0, 0, 0);
+      color: #007aff;
+      transition-duration: 300ms;
+      letter-spacing: 4px;
+      cursor: pointer;
+      user-select: none;
+    }
   }
 
-  .cancel {
-    display: block;
-    margin-right: -60px;
-    margin-left: 8px;
-    flex-shrink: 0;
-    font-size: 17px;
-    cursor: pointer;
-    transform: translate3d(0, 0, 0);
-    color: #007aff;
-    transition-duration: 300ms;
+  .searchbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    z-index: 999;
+    background-color:rgba(0,0,0,0.4);
+    width: 100%;
   }
-
 }
