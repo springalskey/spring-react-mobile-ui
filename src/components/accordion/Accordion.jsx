@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const propTypes = {
-  // 是否手风琴
-  accordion: React.PropTypes.bool,
+  // 是否手风琴效果
+  accordion: React.PropTypes.bool.isRequired,
 };
 
 class Accordion extends React.Component {
@@ -11,14 +11,14 @@ class Accordion extends React.Component {
     super();
     this.props = props;
     this.state = {
-      activeIndex: null,
+      activeIndexList: [],
     };
   }
 
   getItem () {
     const newChildren = [];
     this.props.children.forEach((child, index) => {
-      const isActive = index === this.state.activeIndex;
+      let isActive = this.state.activeIndexList.indexOf(index) !== -1;
       const props = {
         key: index,
         isActive: isActive,
@@ -31,10 +31,34 @@ class Accordion extends React.Component {
     return newChildren;
   }
 
-  onItemClick (index) {
-    index = this.state.activeIndex === index ? null : index;
+  onItemClick (childIndex) {
+    if (this.props.accordion) {
+      this.accordionActive(childIndex);
+    } else {
+      this.accordionDisable(childIndex);
+    }
+  }
+
+  // 手风琴效果
+  accordionActive (childIndex) {
+    // 有值展开；等于null收缩
+    const index = this.state.activeIndexList[0] === childIndex ? null : childIndex;
     this.setState({
-      activeIndex: index
+      activeIndexList: [index]
+    });
+  }
+
+  // 非手风琴效果
+  accordionDisable (childIndex) {
+    // 判断展开或关闭
+    const index = this.state.activeIndexList.indexOf(childIndex);
+    if (index === -1) {
+      this.state.activeIndexList.push(childIndex);
+    } else {
+      this.state.activeIndexList.splice(index, 1);
+    }
+    this.setState({
+      activeIndexList: this.state.activeIndexList
     });
   }
 

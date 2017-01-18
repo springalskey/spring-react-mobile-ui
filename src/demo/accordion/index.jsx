@@ -10,7 +10,7 @@ export default class ListDemo extends React.Component {
   render() {
     return (
       <div className="accordion">
-      
+
         <h1 className="title">accordion=true</h1>
         <Accordion accordion={true}>
           <Accordion.Item title="Item1">
@@ -38,6 +38,7 @@ export default class ListDemo extends React.Component {
           </Accordion.Item>
         </Accordion>
 
+        <br/>
         <h1 className="title">accordion=false</h1>
         <Accordion accordion={false}>
           <Accordion.Item title="Item1">

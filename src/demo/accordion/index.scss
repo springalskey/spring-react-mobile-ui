@@ -1,5 +1,9 @@
 .accordion {
   width: 100%;
-
-  
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-overflow-scrolling : touch;
 }
