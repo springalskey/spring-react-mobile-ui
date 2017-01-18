@@ -13,3 +13,5 @@ export { default as InfiniteScroll } from './infinite-scroll';
 
 export { default as Searchbar } from './searchbar';
 
+export { default as Accordion } from './accordion';
+

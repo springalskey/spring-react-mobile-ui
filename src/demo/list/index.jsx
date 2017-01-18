@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-export default class ListDemo extends React.Component {
+export default class AccordionDemo extends React.Component {
   constructor() {
     super();
   }
@@ -46,6 +46,14 @@ export default class ListDemo extends React.Component {
           <div className="item">
             <Link className="item-label" to="/searchbar-demo">
               searchbar demo
+            </Link>
+          </div>
+        </div>
+
+        <div className="list">
+          <div className="item">
+            <Link className="item-label" to="/accordion-demo">
+              accordion demo
             </Link>
           </div>
         </div>
