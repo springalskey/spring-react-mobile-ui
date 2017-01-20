@@ -39,7 +39,8 @@
   }
 
   &.actived .item-title:after {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    transition: all .3s;
   }
 }
