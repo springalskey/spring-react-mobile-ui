@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
-
 import { Toast } from '../../components';
 
 export default class ToastDemo extends React.Component {

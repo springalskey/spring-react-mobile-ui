@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Link} from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class App extends React.Component {
@@ -13,10 +11,7 @@ export default class App extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
     let current = nextProps.location.pathname;
-    console.log('current='+current);
-    debugger
     if (current === '/' || this.preURL === current) {
       this.setState({ back: true });
     } else {

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
 import { InfiniteScroll } from '../../components';
 
 export default class InfiniteScrollDemo extends React.Component {
@@ -26,7 +25,7 @@ export default class InfiniteScrollDemo extends React.Component {
       this.setState({
         list: this.state.list.concat(list)
       });
-    },1000);
+    },500);
   }
 
   handleLoaded () {
