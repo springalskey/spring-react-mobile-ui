@@ -12,6 +12,7 @@ import ConfirmComponent from './demo/confirm';
 import InfiniteScroll from './demo/infinite-scroll';
 import SearchbarComponent from './demo/searchbar';
 import AccordionComponent from './demo/accordion';
+import TestComponent from './demo/test';
 
 render(
   <Router history={browserHistory}>
@@ -24,6 +25,7 @@ render(
       <Route path='/infinite-scroll-demo' component={InfiniteScroll}></Route>
       <Route path='/searchbar-demo' component={SearchbarComponent}></Route>
       <Route path='/accordion-demo' component={AccordionComponent}></Route>
+      <Route path='/test-demo' component={TestComponent}></Route>
     </Route>
   </Router>,
   document.getElementById('app')

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import { Searchbar } from '../../components';
 
 export default class SearchbarDemo extends React.Component {
@@ -8,10 +9,6 @@ export default class SearchbarDemo extends React.Component {
 
   handleChange (value) {
     console.log(value)
-  }
-
-  celick () {
-    alert(1);
   }
 
   render() {
@@ -29,9 +26,9 @@ export default class SearchbarDemo extends React.Component {
 
           <div className="list">
             <div className="item">
-              <label className="item-label" onClick={this.celick.bind(this)}>
+              <Link to="/test-demo" className="item-label">
                 tost demo
-              </label>
+              </Link>
             </div>
           </div>
         </div>
