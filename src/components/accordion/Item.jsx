@@ -22,10 +22,11 @@ class AccordionItem extends React.Component {
   }
 
   render () {
+    const name = this.props.isActive ? 'actived' : '';
     const style = this.props.isActive ? {height: this.height} : {height: 0};
     return (
       <div 
-        className="ui-accordion-item">
+        className={ 'ui-accordion-item ' + name}>
           <div className="item-title" 
             onClick={this.handleClickItem.bind(this)}>
             <span>{this.props.title}</span>

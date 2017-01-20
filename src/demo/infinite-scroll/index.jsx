@@ -4,7 +4,11 @@ import { InfiniteScroll } from '../../components';
 export default class InfiniteScrollDemo extends React.Component {
   constructor() {
     super();
-    const list = ['item','item','item','item','item','item','item','item','item','item']
+    this.length = 20;
+    const list = [];
+    for (let i = 0; i < this.length; i++) {
+      list.push('item');
+    }
     this.state = {
       list: list,
     };
@@ -13,12 +17,11 @@ export default class InfiniteScrollDemo extends React.Component {
 
   handleInfinite () {
     this.count ++ ;
-    let length = 10;
     if (this.count === 3) {
-      length = 2;
+      this.length = 2;
     }
     let list = [];
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < this.length; i++) {
       list.push('item');
     }
     setTimeout(() => {
@@ -43,7 +46,7 @@ export default class InfiniteScrollDemo extends React.Component {
       <div className="infinite-scroll-demo">
         <h1>Infinite Scroll</h1>
         <InfiniteScroll 
-          size={10}
+          size={20}
           onLoaded={this.handleLoaded.bind(this)}
           onInfinite={this.handleInfinite.bind(this)}>
             {

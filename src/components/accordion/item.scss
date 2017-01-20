@@ -9,8 +9,25 @@
     line-height: 44px;
     background-color: #fff;
     cursor: pointer;
+    position: relative;
+
     &:active {
       background-color: #bbbbbb;
+    }
+
+    &:after {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border: 2px solid #c8c7cc;
+      border-left: 0;
+      border-top: 0;
+      transform: rotate(315deg);
+      -webkit-transform: rotate(315deg);
+      content: '';
+      position: absolute;
+      right: 8px;
+      top: 16px;
     }
   }
 
@@ -18,7 +35,11 @@
     height: 0;
     overflow: hidden;
     transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
   }
 
-
+  &.actived .item-title:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 }
